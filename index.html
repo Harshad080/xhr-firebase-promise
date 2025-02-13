@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xhr firbase Promise</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="./assest/css/style.css" />
+</head>
+<body>
+
+  <div class="alert alert-primary fs-5 fw-5 text-center">
+    XHR CRUD USING PROMISE
+  </div>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mb-5">
+        <form id="postForm">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input required class="form-control" placeholder="Title" type="text" id="title">
+              </div>
+              <div  class="form-group">
+                <label for="content">Content</label>
+                <textarea 
+                required 
+                class="form-control" 
+                rows="4" 
+                id="content"></textarea>
+              </div>
+              <div  class="form-group">
+                <label for="userId">User Id</label>
+                <select class="form-control" id="userId">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+
+                <button type="submit" class="btn btn-primary mb-2 w-100" id="submitBtn">Add Post</button>
+                <button type="button" class="btn btn-primary mb-2 w-100 d-none" id="updateBtn">Update Post</button>
+                <button type="button" class="btn btn-warning w-100" id="cancelBtn">Cancel</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 offset-md-3 d-flex flex-column-reverse" id="showPost">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="loader d-none" id="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="scrollTop d-none" id="scrollTop">
+    <i class="fa-solid fa-up-long"></i>
+    <span>Top</span>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assest/js/app.js"></script>
+</body>
+
+</html>

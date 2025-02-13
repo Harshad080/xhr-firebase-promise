@@ -1,0 +1,27 @@
+body{
+    background-color: #ededed;
+}
+.loader{
+    background-color: rgba(0, 0, 0,0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scrollTop{
+    background-color: rgba(173, 255, 47,0.7);
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
